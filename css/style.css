@@ -38,11 +38,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  z-index: 1;
 }
 
-.site-heading {
+/* .site-heading {
   height: 40%;
-}
+} */
 
 .description-content {
   position: relative;
@@ -51,7 +52,7 @@
 
 .bg-broken-top-selling {
   position: absolute;
-  top: -100px;
+  top: -82px;
   display: block;
   width: 100%;
   -webkit-transform: translateX(-160px);
@@ -68,14 +69,14 @@
   top: -7px;
   display: inline-block !important;
   height: 1px;
-  width: 200px;
+  width: 55%;
   background-color: #fff;
 }
 
 /* About */
 
 .page-section {
-  padding: 100px 0;
+  padding: 20px 0;
 }
 
 .page-section h2.section-heading {
