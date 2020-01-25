@@ -41,10 +41,6 @@
   z-index: 1;
 }
 
-/* .site-heading {
-  height: 40%;
-} */
-
 .description-content {
   position: relative;
   z-index: 2;
@@ -55,11 +51,55 @@
   top: -82px;
   display: block;
   width: 100%;
-  -webkit-transform: translateX(-160px);
-  transform: translateX(-160px);
-  height: 250px;
+  -webkit-transform: translateX(-130px);
+  transform: translateX(-130px);
+  height: 175px;
   background-color: #ffd248;
   z-index: -1;
+}
+
+.bg-broken-top-selling-reversed {
+  position: absolute;
+  top: -82px;
+  display: block;
+  width: 135%;
+  /* -webkit-transform: translateX(130px);
+  transform: translateX(130px); */
+  height: 175px;
+  background-color: #ffd248;
+  z-index: -1;
+}
+
+@media (max-width: 576px) {
+  .bg-broken-top-selling,
+  .bg-broken-top-selling-reversed {
+    display: none;
+  }
+  .description-content {
+    text-align: center;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .bg-broken-top-selling,
+  .bg-broken-top-selling-reversed {
+    display: none;
+  }
+  .description-content {
+    text-align: center;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
 }
 
 .dashed::after {
@@ -76,7 +116,7 @@
 /* About */
 
 .page-section {
-  padding: 20px 0;
+  padding: 25px 0;
 }
 
 .page-section h2.section-heading {
@@ -153,7 +193,7 @@
 
 .timeline > li .timeline-image {
   position: absolute;
-  z-index: 100;
+  z-index: 1;
   left: 0;
   width: 80px;
   height: 80px;
@@ -281,4 +321,94 @@
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
   }
+}
+
+.main-logo {
+  height: 150px;
+}
+
+/*карусель*/
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* preloader */
+#p_prldr {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffd248;
+  z-index: 30;
+}
+
+.contpre small {
+  font-size: 25px;
+}
+
+.contpre {
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  margin-left: -125px;
+  margin-top: -75px;
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: -2px;
+  text-align: center;
+  line-height: 35px;
+}
+
+#p_prldr .svg_anm {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  background: url(../img/pufff.svg) center center no-repeat;
+  background-size: 41px;
+  margin: -16px 0 0 -16px;
+}
+
+/* Сітка товарів */
+
+.item-img-wrapper {
+  position: relative;
+}
+
+.item-header {
+  position: relative;
+  display: inline-block;
+}
+
+.item-header::before {
+  content: " ";
+  position: absolute;
+  top: 1px;
+  z-index: -1;
+  display: block;
+  height: 20px;
+  background: #ffd248;
+  max-width: 100%;
+  width: 100%;
+  transition: width 0.3s 0.1s;
+}
+
+.hot-price {
+  position: absolute;
+  left: 40px;
+  top: 30px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 50px;
+  background-color: #ffd248;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+}
+
+.item-picture {
 }
