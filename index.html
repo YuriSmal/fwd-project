@@ -8,11 +8,50 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="p_prldr"><div class="contpre"><span class="svg_anm"></span><br>LOADING<br></div></div>
+    
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">The WashYourBody</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item anchor">
+                <a class="nav-link" href="#top-selling-anchor">Топ продажу</a>
+              </li>
+              <li class="nav-item anchor">
+                <a class="nav-link" href="#items-go-to">Товари</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Зв'язатись з нами</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <!-- Full Page Image Header with Vertically Centered Content -->
+      <header class="masthead">
+        <div class="container h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+              <img class="img-fluid main-logo" src="img/logo.png" alt="logo image" >
+              <h1 class="font-weight-light mt-2 text-uppercase">The WashYourBody Shop</h1>
+              <p class="lead">Ми створюємо ароматну залежність ❤️</p>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid px-5">
      <section class="about-antiseptics">
       <div class="row mt-5">
         <div class="col-lg-4 description text-justify">
@@ -23,7 +62,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus optio doloremque nesciunt dolorum corporis ex,
             cumque delectus quibusdam? Sunt fugiat mollitia amet facere quibusdam pariatur voluptas tempore quod molestias quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo possimus nam aliquam natus, dolorum exercitationem fugit est quaerat distinctio earum mollitia cumque adipisci hic laudantium necessitatibus suscipit velit amet quo!
           </p>
-          <p class="anchor text-center"><a class="btn font-weight-bold text-uppercase" href="#about-go-to">Про нас
+          <p class="anchor text-center"><a class="btn font-weight-bold text-uppercase" href="#about-go-to">Написати нам
             <i class="fas fa-chevron-down ml-2 arrow-strafe-left"></i> </a></p>
         </div>
         <div class="col-lg-8 carousel-wrapper">
@@ -59,7 +98,7 @@
        </div>
       </section>
 
-      <section class="top-selling">
+      <section id="top-selling-anchor" class="top-selling">
         <div class="row mt-5">
           <div class="col-md-7 ">
             <img src="img/1.jpg" class="img-fluid" alt="" />
@@ -75,174 +114,104 @@
           </div>
         </div>
       </section>
-<!-- 
-      <section class="top-selling">
-        <div class="row mt-5">
-          <div class="col-md-7 order-last">
-            <img src="img/1.jpg" class="img-fluid" alt="" />
-          </div>
-          <div class="col-md-5 description align-items-end">
-            <div class="description-content">
-              <div class="bg-broken-top-selling-reversed"></div>
-              <p class="mb-n1 text-white dashed">ТОП ПРОДАЖУ</p>
-              <h1 class="text-uppercase">raspberry <small>&</small></br>blueberry</h1>
-              <p><a class="btn font-weight-bold" href="">ПЕРЕГЛЯНУТИ ВСІ
-                <i class="fas fa-chevron-right ml-2 arrow-strafe-right"></i></a></p>
-            </div>
-          </div>
-        </div>
-      </section> -->
+    </div>
 
       <!-- Сітка товарів -->
-      <section class="items">
-        <div id="items-go-to" class="row text-center">
-          <div class="col-sm-6 col-md-3">
-            <div class="item-img-wrapper">
-              <span class="hot-price text-center">Суперціна</span>
-              <img class="img-fluid item-picture" src="img/items/1.jpg" alt="item">
+    
+      <div class="container-fluid px-5">
+        <section id="items-go-to" class="items">
+          <div class="cart-header text-center mt-5"><h2>Товари</h2></div>
+          <div class="row text-center mt-5">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card-wrapper mb-3">
+                <div class="item-img-wrapper">
+                  <span class="hot-price text-center">Суперціна</span>
+                  <img class="img-fluid item-picture" src="img/items/1.jpg" alt="item">
+                </div>
+                <h3 class="item-header">Red Apple</h3> 
+                <button>Придбати <span class="badge badge-danger">45 грн</span></button>
+              </div>
             </div>
-            <h3 class="item-header">Red Apple <span class="badge badge-danger">60 грн</span></h3> 
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="item-img-wrapper">
-              <span class="hot-price text-center">Суперціна</span>
-              <img class="img-fluid item-picture" src="img/items/2.jpg" alt="item">
-            </div>
-            <h3 class="item-header">Sweet Lemon <span class="badge badge-danger">45 грн</span></h3>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="item-img-wrapper">
-              <span class="hot-price text-center">Суперціна</span>
-              <img class="img-fluid item-picture" src="img/items/3.jpg" alt="item">
-            </div>
-            <h3 class="item-header">Orange Cherry <span class="badge badge-danger">45 грн</span></h3>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="item-img-wrapper">
-              <span class="hot-price text-center">Суперціна</span>
-              <img class="img-fluid item-picture" src="img/items/4.jpg" alt="item">
-            </div>
-            <h3 class="item-header">Pineapple <span class="badge badge-danger">45 грн</span></h3>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="item-img-wrapper">
-              <img class="img-fluid item-picture" src="img/items/5.jpg" alt="item">
-            </div>
-            <h3 class="item-header">Peach <span class="badge badge-danger">60 грн</span></h3>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="item-img-wrapper">
-              <img class="img-fluid item-picture" src="img/items/6.jpg" alt="item">
-            </div>
-            <h3 class="item-header">Bubble Gum <span class="badge badge-danger">60 грн</span></h3>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="item-img-wrapper">
-              <img class="img-fluid item-picture" src="img/items/7.jpg" alt="item">
-            </div>
-            <h3 class="item-header">Watermelon Mojito <span class="badge badge-danger">60 грн</span></h3>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="item-img-wrapper">
-              <img class="img-fluid item-picture" src="img/items/8.jpg" alt="item">
-            </div>
-            <h3 class="item-header">Pina Colada <span class="badge badge-danger">60 грн</span></h3>
-          </div>
-          <!-- <div class="col-sm-6 col-md-3">
-            <div class="item-img-wrapper">
-              <img class="img-fluid item-picture" src="img/items/9.jpg" alt="item">
-            </div>
-            <h3 class="item-header">Mango Strawberry <span class="badge badge-danger">60 грн</span></h3>
-          </div> -->
-        </div>  
-      </section>
 
-      <!-- Про нас -->
-      <section class="page-section" id="about">
-        <div class="container">
-          <div class="row">
-            <a id="about-go-to" href=""></a>
-            <div class="col-lg-12 text-center">
-              <h2 class="section-heading text-uppercase">Хто ми?</h2>
-              <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card-wrapper mb-3">
+                <div class="item-img-wrapper">
+                  <span class="hot-price text-center">Суперціна</span>
+                  <img class="img-fluid item-picture" src="img/items/2.jpg" alt="item">
+                </div>
+                <h3 class="item-header">Sweet Lemon</h3>
+                <button>Придбати <span class="badge badge-danger">45 грн</span></button>
+              </div>  
             </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <ul class="timeline">
-                <li>
-                  <div class="timeline-image">
-                    <img class="rounded-circle img-fluid" src="img/about.jpg" alt="">
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4>2018-2019</h4>
-                      <h4 class="subheading">Lorem, ipsum dolor.</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-inverted">
-                  <div class="timeline-image">
-                    <img class="rounded-circle img-fluid" src="img/about.jpg" alt="">
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4>2018-2019</h4>
-                      <h4 class="subheading">Lorem, ipsum dolor.</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="timeline-image">
-                    <img class="rounded-circle img-fluid" src="img/about.jpg" alt="">
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4>2018-2019</h4>
-                      <h4 class="subheading">Lorem, ipsum dolor.</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-inverted">
-                  <div class="timeline-image">
-                    <img class="rounded-circle img-fluid" src="img/about.jpg" alt="">
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4>2018-2019</h4>
-                      <h4 class="subheading">Lorem, ipsum dolor.</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-inverted">
-                  <div class="timeline-image">
-                    <h4>Be Part
-                      <br>Of Our
-                      <br>Story!</h4>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
-    </div>
-   
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card-wrapper mb-3">
+                <div class="item-img-wrapper">
+                  <span class="hot-price text-center">Суперціна</span>
+                  <img class="img-fluid item-picture" src="img/items/3.jpg" alt="item">
+                </div>
+                <h3 class="item-header">Orange Cherry</h3>
+                <button>Придбати <span class="badge badge-danger">45 грн</span></button>
+              </div>  
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card-wrapper mb-3">
+                <div class="item-img-wrapper">
+                  <span class="hot-price text-center">Суперціна</span>
+                  <img class="img-fluid item-picture" src="img/items/4.jpg" alt="item">
+                </div>
+                <h3 class="item-header">Pineapple</h3>
+                <button>Придбати <span class="badge badge-danger">45 грн</span></button>
+              </div>  
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card-wrapper mb-3">
+                <div class="item-img-wrapper">
+                  <img class="img-fluid item-picture" src="img/items/5.jpg" alt="item">
+                </div>
+                <h3 class="item-header">Peach</h3>
+                <button>Придбати <span class="badge badge-danger">60 грн</span></button>
+              </div>
+            </div>  
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card-wrapper mb-3">
+                <div class="item-img-wrapper">
+                  <img class="img-fluid item-picture" src="img/items/6.jpg" alt="item">
+                </div>
+                <h3 class="item-header">Bubble Gum</h3>
+                <button>Придбати <span class="badge badge-danger">60 грн</span></button>
+              </div>
+            </div>  
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card-wrapper mb-3">
+                <div class="item-img-wrapper">
+                  <img class="img-fluid item-picture" src="img/items/7.jpg" alt="item">
+                </div>
+                <h3 class="item-header">Watermelon Mojito</h3>
+                <button>Придбати <span class="badge badge-danger">60 грн</span></button>
+              </div>
+            </div>  
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card-wrapper mb-3">
+                <div class="item-img-wrapper">
+                  <img class="img-fluid item-picture" src="img/items/8.jpg" alt="item">
+                </div>
+                <h3 class="item-header">Pina Colada</h3>
+                <button>Придбати <span class="badge badge-danger">60 грн</span></button>
+              </div>
+            </div>  
+            </div>  
+          </section>
+       </div>
+   <!--Кінець сітки -->
     <!-- jQuery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="js/countUp.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="js/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
