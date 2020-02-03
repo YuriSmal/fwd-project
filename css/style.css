@@ -410,5 +410,6 @@
   color: #fff;
 }
 
-.item-picture {
+.card {
+  border: none;
 }
