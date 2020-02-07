@@ -434,13 +434,13 @@ h3,
   display: block;
 }
 
-.cart-header h2 {
+.section-header {
   position: relative;
   display: inline-block;
   text-transform: uppercase;
 }
 
-.cart-header h2::after {
+.section-header::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -451,7 +451,7 @@ h3,
   left: 0;
   right: 0;
 }
-.cart-header h2:before {
+.section-header::before {
   content: "";
   position: absolute;
   height: 2px;
@@ -535,4 +535,9 @@ h3,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.5s;
+}
+
+input,
+textarea {
+  border-radius: 0 !important;
 }
