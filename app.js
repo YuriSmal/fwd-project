@@ -37,6 +37,7 @@ app.post("/send", (req, res) => {
   console.log(req.body);
 });
 
+<<<<<<< HEAD
 // app.use((req, res, next) => {
 //   res.header("Access-Control-Allow-Origin", "*");
 //   res.header(
@@ -56,6 +57,28 @@ app.post("/send", (req, res) => {
 //     Message: ${req.body.message}`
 //   );
 // });
+=======
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
+app.use(express.json());
+app.post("/", (req, res) => {
+  telegram.sendMessage(
+    process.env.MY_ID,
+    `Name: ${req.body.name}
+    Email Address: ${req.body.email}
+    Subject: ${req.body.subject}
+    Message: ${req.body.message}`
+  );
+});
+
+>>>>>>> 477fca142c4f0ec3fb75bd117bd783d54ca0d32a
 // fetch(url, {
 //   method: 'POST',
 //   mode: 'cors',
