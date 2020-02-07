@@ -45,24 +45,26 @@ app.use((req, res, next) => {
   );
   next();
 });
+
 app.use(express.json());
 app.post("/", (req, res) => {
   telegram.sendMessage(
-    process.env.SHEERLIN_ID,
+    process.env.MY_ID,
     `Name: ${req.body.name}
     Email Address: ${req.body.email}
     Subject: ${req.body.subject}
     Message: ${req.body.message}`
   );
 });
-fetch(url, {
-  method: 'POST',
-  mode: 'cors',
-  body: JSON.stringify({ …this.state.form}),
-  headers: {
-  'Content-Type': 'application/json',
-  },
-});
+
+// fetch(url, {
+//   method: 'POST',
+//   mode: 'cors',
+//   body: JSON.stringify({ …this.state.form}),
+//   headers: {
+//   'Content-Type': 'application/json',
+//   },
+// });
 app.listen(3000, () => console.log("Example app listening on port 3000!"));
 
 // const express = require("express");
