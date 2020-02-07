@@ -427,10 +427,6 @@ h3,
   color: #fff;
 }
 
-<<<<<<< HEAD:css/style.css
-.card {
-  border: none;
-=======
 .counters span {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -539,5 +535,4 @@ h3,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.5s;
->>>>>>> 83fa69ac76afbc93b8062c68591a11a0d60b4b6d:public/css/style.css
 }

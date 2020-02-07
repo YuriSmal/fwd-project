@@ -3,20 +3,17 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
+const chatId = -371800553;
+const token = '820340509:AAG8XfVwwGJY7PvvDsiiz7bPmSy0qX3UXKc';
 const path = require("path");
-const fetch = require("node-fetch");
-const url = "localhost:3000";
 const Telegram = require("telegraf/telegram");
-const telegram = new Telegram(process.env.BOT_TOKEN, {
-  agent: null,
-  webhookReply: true
-});
+
 const Telegraf = require("telegraf");
-const bot = new Telegraf(process.env.BOT_TOKEN);
-bot.use(ctx => {
-  telegram.sendMessage(ctx.from.id, `Your Telegram id: ${ctx.from.id}`);
-});
-bot.startPolling();
+const bot = new Telegram(token);
+// bot.use(ctx => {
+//   telegram.sendMessage(ctx.from.id, `Your Telegram id: ${ctx.from.id}`);
+// });
+// bot.startPolling();
 
 // //View engine setup
 app.engine("handlebars", exphbs());
@@ -35,9 +32,19 @@ app.get("/", (req, res) => {
 
 app.post("/send", (req, res) => {
   console.log(req.body);
+  let data = bot.sendMessage(chatId, "Name: " + req.body.name + "\n" + "Email: " +  req.body.email + "\n" + "Message: " +  req.body.message);
+  data.then((res) => {
+    console.log(res);
+  }).catch(() => {
+
+  });
+  console.log(data);
+  res.redirect('/');
 });
 
-<<<<<<< HEAD
+app.listen(3000, () => console.log("Example app listening on port 3000!"));
+
+
 // app.use((req, res, next) => {
 //   res.header("Access-Control-Allow-Origin", "*");
 //   res.header(
@@ -57,28 +64,6 @@ app.post("/send", (req, res) => {
 //     Message: ${req.body.message}`
 //   );
 // });
-=======
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
-
-app.use(express.json());
-app.post("/", (req, res) => {
-  telegram.sendMessage(
-    process.env.MY_ID,
-    `Name: ${req.body.name}
-    Email Address: ${req.body.email}
-    Subject: ${req.body.subject}
-    Message: ${req.body.message}`
-  );
-});
-
->>>>>>> 477fca142c4f0ec3fb75bd117bd783d54ca0d32a
 // fetch(url, {
 //   method: 'POST',
 //   mode: 'cors',
@@ -87,7 +72,6 @@ app.post("/", (req, res) => {
 //   'Content-Type': 'application/json',
 //   },
 // });
-app.listen(3000, () => console.log("Example app listening on port 3000!"));
 
 // const express = require("express");
 // const bodyParser = require("body-parser");
