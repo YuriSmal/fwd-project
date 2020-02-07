@@ -37,32 +37,33 @@ app.post("/send", (req, res) => {
   console.log(req.body);
 });
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
-app.use(express.json());
-app.post("/", (req, res) => {
-  telegram.sendMessage(
-    process.env.SHEERLIN_ID,
-    `Name: ${req.body.name}
-    Email Address: ${req.body.email}
-    Subject: ${req.body.subject}
-    Message: ${req.body.message}`
-  );
-});
-fetch(url, {
-  method: 'POST',
-  mode: 'cors',
-  body: JSON.stringify({ …this.state.form}),
-  headers: {
-  'Content-Type': 'application/json',
-  },
-});
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept"
+//   );
+//   next();
+// });
+
+// app.use(express.json());
+// app.post("/", (req, res) => {
+//   telegram.sendMessage(
+//     process.env.SHEERLIN_ID,
+//     `Name: ${req.body.name}
+//     Email Address: ${req.body.email}
+//     Subject: ${req.body.subject}
+//     Message: ${req.body.message}`
+//   );
+// });
+// fetch(url, {
+//   method: 'POST',
+//   mode: 'cors',
+//   body: JSON.stringify({ …this.state.form}),
+//   headers: {
+//   'Content-Type': 'application/json',
+//   },
+// });
 app.listen(3000, () => console.log("Example app listening on port 3000!"));
 
 // const express = require("express");
