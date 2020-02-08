@@ -44,8 +44,12 @@ app.post("/send", (req, res) => {
       "Повідомлення: " +
       req.body.message
   );
-  data.then(res => {
-    console.log(res);
+  data.then(() => { 
+    res.status(200).send("Message sent");
+    console.log("Message sent");
+  }).catch(() => {
+    res.status(404).end("Error has occured");
+    console.log("Error has occured")
   });
   console.log(data);
   res.redirect("/");
