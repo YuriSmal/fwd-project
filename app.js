@@ -44,13 +44,15 @@ app.post("/send", (req, res) => {
       "Повідомлення: " +
       req.body.message
   );
-  data.then(() => { 
-    res.status(200).send("Message sent");
-    console.log("Message sent");
-  }).catch(() => {
-    res.status(404).end("Error has occured");
-    console.log("Error has occured")
-  });
+  data
+    .then(() => {
+      res.status(200).send("Message sent");
+      console.log("Message sent");
+    })
+    .catch(() => {
+      res.status(404).end("Error has occured");
+      console.log("Error has occured");
+    });
   console.log(data);
   res.redirect("/");
 });
@@ -60,5 +62,3 @@ if (port == null || port == "") {
   port = 3000;
 }
 app.listen(port, () => console.log("Example app listening on port 3000!"));
-
-// app.listen(3000, () => console.log("Example app listening on port 3000!"));

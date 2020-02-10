@@ -541,3 +541,15 @@ input,
 textarea {
   border-radius: 0 !important;
 }
+
+.company-description p {
+  text-indent: 15px;
+}
+
+.contact-info {
+  color: black !important;
+}
+
+.contact-info:hover {
+  border-bottom: 1px solid black;
+}
